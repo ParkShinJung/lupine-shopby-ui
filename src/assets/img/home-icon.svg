@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="16742" transform="translate(-469 -13)">
+    <path id="Guide" d="M0,0H26V26H0Z" transform="translate(469 13)" fill="none"/>
+    <g id="home" transform="translate(470.952 15.957)">
+      <g id="16739" transform="translate(2.662 7.892)">
+        <g id="16738" transform="translate(0 0)">
+          <path id="28123" d="M77.229,211.786v10.295H73.342v-4.452a.707.707,0,0,0-.707-.707H67.665a.707.707,0,0,0-.707.707v4.452H63.094V211.786H61.681v11a.707.707,0,0,0,.707.707h5.277a.707.707,0,0,0,.707-.707v-4.452h3.557v4.452a.707.707,0,0,0,.707.707h5.3a.707.707,0,0,0,.707-.707v-11Z" transform="translate(-61.681 -211.786)" fill="#2a2a2b"/>
+        </g>
+      </g>
+      <g id="16741">
+        <g id="16740" transform="translate(0 0)">
+          <path id="28124" d="M21.873,38.709,11.626,29.122a.707.707,0,0,0-.961,0L.229,38.705a.707.707,0,0,0,.956,1.041L11.139,30.6l9.769,9.14a.707.707,0,0,0,.966-1.032Z" transform="translate(0 -28.931)" fill="#2a2a2b"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

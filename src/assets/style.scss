@@ -1,0 +1,111 @@
+$kendo-color-primary: #3888F5;
+$base-font-color: #000000;
+
+// App.scss
+@import "@progress/kendo-theme-default/dist/all.scss";
+//@import "@progress/kendo-theme-default/dist/default-ocean-blue.scss";
+
+a,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $base-font-color;
+}
+
+.page-title {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px 20px;
+  line-height: 22px;
+
+  img {
+    height: 24px;
+    vertical-align: bottom;
+  }
+}
+
+.list-table {
+  border-top: none;
+  border-bottom: none;
+  border-spacing: 0px;
+  //position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  color: #606266;
+
+  thead{
+    tr:first-child th {
+      border-top: 1px solid #D0D5E4;
+    }
+    tr.border-top {
+      border-top: 1px solid #D0D5E4;
+    }
+
+    tr {
+      th {
+        text-align: center;
+        border-right: 1px solid #D0D5E4;
+        background-color: #E8EAF1;
+        height: 40px;
+        color: #4D5969;
+      }
+
+      .th-bottom-border {
+        border-bottom: 1px solid #D0D5E4;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: none;
+      th {
+        background-color: #E8EAF1;
+        border-bottom: 1px solid #D0D5E4;
+      }
+      td:first-child {
+        border-left: 1px solid #ebeef5;
+      }
+      td:last-child {
+        border-right: 1px solid #ebeef5;
+      }
+      td {
+        text-align: center;
+        border-right: 1px solid #ebeef5;
+        border-bottom: 1px solid #ebeef5;
+
+        span.lot-name {
+          display: block;
+          margin: 5px 0px;
+        }
+      }
+    }
+    tr:last-child {
+      td {
+        //border-bottom: 1px solid #ebeef5;
+      }
+    }
+  }
+}
+
+.list-table>tbody>tr>th,
+.list-table>tbody>tr>td,
+.info-table>tbody>tr>th,
+.info-table>tbodynone-data>tr>td {
+  padding: 8px 15px;
+}
+
+.none-data {
+  height: 200px;
+  vertical-align: middle;
+}
+

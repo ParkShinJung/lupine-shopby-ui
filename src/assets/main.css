@@ -1,0 +1,36 @@
+html, body {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+#app { padding: 0 !important; }
+
+.pd-10 {
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+
+* {
+  font-family: 'Pretendard M', serif;
+}
+
+@font-face {
+  font-family: 'Pretendard R';
+  src: url('@/assets/fonts/PretendardGOVVariable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard M';
+  src: url('@/assets/fonts/PretendardGOVVariable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard B';
+  src: url('@/assets/fonts/PretendardGOVVariable.ttf') format('truetype');
+}
