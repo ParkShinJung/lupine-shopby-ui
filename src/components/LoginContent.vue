@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { TextBox as KTextBox, Checkbox } from "@progress/kendo-vue-inputs";
-import { Button as KButton } from '@progress/kendo-vue-buttons'
+// import { TextBox as KTextBox, Checkbox } from "@progress/kendo-vue-inputs";
+// import { Button as KButton } from '@progress/kendo-vue-buttons'
 import { useRouter } from 'vue-router'
 
 const id = ref('')
@@ -67,13 +67,13 @@ const viewDashBoard = async () => {
       <div :class="$style['second-title']">모니터링 시스템</div>
     </div>
     <form :class="$style.form" :novalidate="true">
-      <KTextBox
+      <b-form-text
         v-model="id"
         :type="'text'"
         :class="$style.id"
         placeholder="아이디"
       />
-      <KTextBox
+      <b-form-text
         v-model="pw"
         :class="$style.pw"
         :type="'password'"
@@ -82,7 +82,7 @@ const viewDashBoard = async () => {
       <div>
         <checkbox :class="$style.checkbox"> <span style="margin-left: 0.5rem">아이디 저장</span></checkbox>
       </div>
-      <KButton
+      <b-button
         type="button"
         :disablecd="!validated"
         :class="$style.btn"
@@ -90,7 +90,7 @@ const viewDashBoard = async () => {
         @click="() => viewDashBoard()"
       >
         로그인
-      </KButton>
+      </b-button>
     </form>
   </div>
   </html>

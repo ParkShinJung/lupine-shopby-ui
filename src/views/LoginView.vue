@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { TextBox as KTextBox, Checkbox } from "@progress/kendo-vue-inputs";
-import { Button as KButton } from '@progress/kendo-vue-buttons'
+// import { TextBox as KTextBox, Checkbox } from "@progress/kendo-vue-inputs";
+// import { Button as KButton } from '@progress/kendo-vue-buttons'
 import { useRouter } from 'vue-router'
 
 const id = ref('')
@@ -61,37 +61,45 @@ const viewDashBoard = async () => {
 
 <template>
   <html>
-  <div :class="$style.layout">
-    <div :class="$style['title-layout']">
-      <div :class="$style['first-title']">축제식 양식장</div>
-      <div :class="$style['second-title']">모니터링 시스템</div>
-    </div>
-    <form :class="$style.form" :novalidate="true">
-      <KTextBox
-          v-model="id"
-          :type="'text'"
-          :class="$style.id"
-          placeholder="아이디"
-      />
-      <KTextBox
-          v-model="pw"
-          :class="$style.pw"
-          :type="'password'"
-          placeholder="비밀번호"
-      />
-      <div>
-        <checkbox :class="$style.checkbox"> <span style="margin-left: 0.5rem">아이디 저장</span></checkbox>
+  <div class="login-container">
+
+    <el-form ref="loginForm" class="login-form" auto-complete="on" label-position="left">
+
+      <div class="title-container">
+        <h3 class="title text-left" style="display: flex">
+          <div class="title-img-wrap">
+            <!--img src="@/assets/logo/logo_w.png" alt="" -->
+            <font-awesome-icon icon="fa-solid fa-network-wired" size="3x"/>
+          </div>
+          <div class="title-text display-inline">
+            Shop-by<br>
+            <span class="gray-text text-md">샵바이 루팡 시스템</span><br>
+            <span class="gray-text text-sm font-weight-normal">Version 1.0.0</span>
+          </div>
+        </h3>
+        <!-- <lang-select class="set-language"/> -->
       </div>
-      <KButton
-          type="button"
-          :disablecd="!validated"
-          :class="$style.btn"
-          :style="[validated ? { backgroundColor: '#3888f5' } : { backgroundColor: '#d0d5e4' }]"
-          @click="() => viewDashBoard()"
-      >
-        로그인
-      </KButton>
-    </form>
+
+      <el-form-item prop="username">
+        <span class="svg-container">
+          <font-awesome-icon icon="fa fa-user" />
+        </span>
+        <el-input placeholder="ID" name="username" type="text" auto-complete="on" class="login-input"/>
+      </el-form-item>
+
+      <el-form-item prop="password">
+        <span class="svg-container">
+          <font-awesome-icon icon="fas fa-key" />
+        </span>
+        <el-input :type="'password'" placeholder="Password" name="password" auto-complete="on" class="login-input"/>
+      </el-form-item>
+
+      <el-button type="primary" style="width:100%;margin-bottom:30px;" >Log-In</el-button>
+    </el-form>
+    <modals-container />
+<!--    <change-password-->
+<!--        :account-id="loginForm.username"-->
+<!--    />-->
   </div>
   </html>
 </template>
